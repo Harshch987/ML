@@ -38,7 +38,7 @@ class Perceptron(object):
 
 
 df = pd.read_csv('D:\Edge Download\Iris\iris.csv', header=None)
-# print(df)
+#print(df)
 y = df.iloc[0:100, 4].values
 y = np.where(y == 'Setosa', -1, 1)
 x = df.iloc[0:100, [0, 2]].values
@@ -61,6 +61,6 @@ plt.ylabel('Number Of Classification')
 plt.show()
 
 if ppn.predict([5.0, 1.4]) == -1:
-    print("Setosa")
+    print("setosa")
 else:
-    print("Not Setosa")
+    print("Not setosa")
