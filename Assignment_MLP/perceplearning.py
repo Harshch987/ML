@@ -10,8 +10,8 @@ import pandas as pd
 import matplotlib.pyplot as plt
 
 
-class Perceptron(object):
-    def __init__(self, eta=0.01, n_iter=10):
+class Perceptron:
+    def __init__(self, eta, n_iter):
         self.eta = eta
         self.n_iter = n_iter
 
@@ -50,7 +50,7 @@ plt.ylabel('petal-length')
 plt.legend(loc='upper left')
 plt.show()
 
-ppn = Perceptron(eta=0.1, n_iter=5)
+ppn = Perceptron(0.1,5)
 ppn.fit(x, y)
 print(ppn.w_)
 
